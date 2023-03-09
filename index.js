@@ -78,7 +78,7 @@ const messages = [
   {
     channel: "2",
     account: "0x176F3DAb24a159341c0509bB36B833E7fdd0a132",
-    text: "Does anyone have any tips on becoming a blockchain developer?"
+    text: "Does anyone have any tips on becoming a Data Science Roadmap?"
   },
 
   {
