@@ -1,21 +1,12 @@
 const express = require('express')
-const cors = require("cors")
 
 const app = express();
 
-app.all("*", function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type",'Authorization');
-  // res.setHeader('Access-Control-Allow-Credentials', true);
-  next();
-});
- 
+
 app.get("/",(req,res)=>{
   res.send({message:" Socket Api working fine"});
 })
 
-app.use(cors())
 
 const PORT = process.env.PORT || 3030
 const server = app.listen(PORT, () => console.log(`Listening on ${PORT}\n`))
@@ -194,7 +185,7 @@ const messages = [
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000"
+    origin: "https://ap-discord-app.netlify.app"
   }
 });
 
